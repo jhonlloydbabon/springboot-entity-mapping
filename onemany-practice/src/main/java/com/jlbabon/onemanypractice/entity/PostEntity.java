@@ -19,7 +19,10 @@ public class PostEntity {
     private String title;
     private String description;
 
-    @OneToMany(cascade = CascadeType.ALL) // Kapag may bagong post that masesave siya sa comment
-    @JoinColumn(name = "post_id", referencedColumnName = "id") // reference column id nitong post entity
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "post_id", referencedColumnName = "id")
     private List<CommentEntity> comments;
+//    @OneToMany(cascade = CascadeType.ALL) // Kapag may bagong post that masesave siya sa comment
+//    @JoinColumn(name = "post_id", referencedColumnName = "id") // reference column id nitong post entity
+//    private List<CommentEntity> comments;
 }
