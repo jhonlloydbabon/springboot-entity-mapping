@@ -27,11 +27,11 @@ public class PostEntity {
     // EAGER = bibigay niya lahat ng kailangan mo kahit hindi mo hinihingi
     // LAZY = kung ano lang yung kailangan mo yung lang bibigay niya
 
-    @ManyToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(
             name = "post_tags",
-            joinColumns = @JoinColumn( name = "fk_post", referencedColumnName = "post_id"),
-            inverseJoinColumns = @JoinColumn(name = "fk_tags", referencedColumnName = "tag_id")
+            joinColumns = @JoinColumn(name = "fk_post", referencedColumnName = "postId"),
+            inverseJoinColumns = @JoinColumn(name = "fk_tags", referencedColumnName = "tagId")
     )
     private Set<TagEntity> tags = new HashSet<>();
 }

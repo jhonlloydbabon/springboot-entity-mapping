@@ -27,26 +27,26 @@ public class ManyToManyMappingApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		PostEntity postEntity = new PostEntity();
-		postEntity.setTitle("Many to Many Relationship");
-		postEntity.setDescription("A practice for springboot enitity mapping.");
-		postEntity.setContent("Blog for aspiring springboot developer");
-		postEntity.setPostedAt(LocalDateTime.now());
-		postEntity.setLastUpdatedAt(LocalDateTime.now());
-
-		TagEntity tag1 = new TagEntity();
-		tag1.setName("Springboot");
-		TagEntity tag2 = new TagEntity();
-		tag2.setName("Hibernate");
-
-		tag1.getPosts().add(postEntity);
-		tag2.getPosts().add(postEntity);
-
-		postEntity.getTags().add(tag1);
-		postEntity.getTags().add(tag2);
-
-
-
-		this.postRepository.save(postEntity);
+//		PostEntity postEntity = new PostEntity();
+//		postEntity.setTitle("Many to Many Relationship");
+//		postEntity.setDescription("A practice for springboot enitity mapping.");
+//		postEntity.setContent("Blog for aspiring springboot developer");
+//		postEntity.setPostedAt(LocalDateTime.now());
+//		postEntity.setLastUpdatedAt(LocalDateTime.now());
+//
+//		TagEntity tag1 = new TagEntity();
+//		tag1.setName("Springboot");
+//		TagEntity tag2 = new TagEntity();
+//		tag2.setName("Hibernate");
+//
+//		tag1.getPosts().add(postEntity);
+//		tag2.getPosts().add(postEntity);
+//
+//		postEntity.getTags().add(tag1);
+//		postEntity.getTags().add(tag2);
+//
+//
+//
+//		this.postRepository.save(postEntity);
 	}
 }
